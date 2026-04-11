@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Audit: D&M Roofing Texas | KILO Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── KILO Design Tokens ── */
+    :root {
+      --kilo-dark: #282828;
+      --kilo-light: #ffffff;
+      --kilo-accent: #ccff00;
+      --kilo-accent-hover: #b3e600;
+      --kilo-text-light: #e0e0e0;
+      --kilo-text-dark: #282828;
+      --kilo-text-muted: #9a9a9a;
+      --kilo-border: rgba(255,255,255,0.1);
+      --kilo-border-accent: rgba(204,255,0,0.2);
+      --kilo-card-bg: rgba(255,255,255,0.03);
+      --kilo-card-bg-hover: rgba(255,255,255,0.06);
+      --pass: #22c55e;
+      --pass-bg: rgba(34,197,94,0.1);
+      --warn: #eab308;
+      --warn-bg: rgba(234,179,8,0.1);
+      --fail: #ef4444;
+      --fail-bg: rgba(239,68,68,0.1);
+      --font-archivo: 'Archivo', sans-serif;
+      --font-space: 'Space Grotesk', sans-serif;
+      --font-inter: 'Inter', sans-serif;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: var(--font-inter);
+      background: var(--kilo-dark);
+      color: var(--kilo-text-light);
+      line-height: 1.65;
+      padding: 0; margin: 0;
+    }
+
+    ::selection {
+      background: var(--kilo-accent);
+      color: var(--kilo-text-dark);
+    }
+
+    .page { max-width: 820px; margin: 0 auto; padding: 3rem 2rem; }
+
+    /* ── Cover ── */
+    .cover {
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+      page-break-after: always;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      font-family: var(--font-space);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--kilo-accent);
+      border: 1.5px solid var(--kilo-accent);
+      border-radius: 100px;
+      padding: 0.45rem 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .cover h1 {
+      font-family: var(--font-archivo);
+      font-size: 2.8rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--kilo-light);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .cover h1 em {
+      font-style: normal;
+      color: var(--kilo-accent);
+    }
+
+    .cover-subtitle {
+      font-family: var(--font-space);
+      font-size: 1.05rem;
+      color: var(--kilo-text-muted);
+      margin-bottom: 3rem;
+      font-weight: 400;
+    }
+
+    .cover-meta {
+      font-family: var(--font-inter);
+      font-size: 0.85rem;
+      color: var(--kilo-text-muted);
+      line-height: 1.8;
+    }
+
+    .cover-meta strong {
+      color: var(--kilo-text-light);
+      font-weight: 500;
+    }
+
+    .cover-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--kilo-accent);
+      margin: 2rem auto;
+      border: none;
+    }
+
+    /* ── Section headings ── */
+    .section {
+      margin-bottom: 3.5rem;
+      page-break-inside: avoid;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--kilo-border);
+      padding-bottom: 0.75rem;
+    }
+
+    .section-number {
+      font-family: var(--font-archivo);
+      font-size: 2.5rem;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-archivo);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--kilo-light);
+      line-height: 1.25;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .section-intro {
+      font-size: 0.92rem;
+      color: var(--kilo-text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* ── Sub-section headings ── */
+    .sub-header {
+      font-family: var(--font-archivo);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--kilo-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin: 2rem 0 1rem;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--kilo-card-bg);
+      border: 1px solid var(--kilo-border);
+      border-left: 3px solid var(--kilo-accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+      transition: background 0.2s ease;
+      page-break-inside: avoid;
+    }
+
+    .card:hover { background: var(--kilo-card-bg-hover); }
+
+    .card-body {
+      font-size: 0.88rem;
+      color: var(--kilo-text-light);
+      line-height: 1.7;
+    }
+
+    .card-body p { margin-bottom: 0.5rem; }
+    .card-body strong { color: var(--kilo-light); font-weight: 600; }
+
+    /* ── Brand snapshot colors ── */
+    .color-swatch {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 6px;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 2rem;
+      font-size: 0.85rem;
+    }
+
+    .brand-grid dt {
+      color: var(--kilo-text-muted);
+      font-weight: 500;
+    }
+
+    .brand-grid dd {
+      color: var(--kilo-light);
+      font-weight: 400;
+    }
+
+    /* ── Tags / pills ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--font-space);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.05);
+      color: var(--kilo-text-muted);
+    }
+
+    .tag--accent { background: rgba(204,255,0,0.1); color: var(--kilo-accent); }
+    .tag--pass { background: var(--pass-bg); color: var(--pass); }
+    .tag--fail { background: var(--fail-bg); color: var(--fail); }
+    .tag--warn { background: var(--warn-bg); color: var(--warn); }
+
+    /* ── Tables ── */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: 1rem;
+    }
+
+    .kilo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    .kilo-table th {
+      font-family: var(--font-space);
+      font-weight: 600;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--kilo-text-muted);
+      padding: 0.7rem 0.6rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      white-space: nowrap;
+    }
+
+    .kilo-table td {
+      padding: 0.6rem 0.6rem;
+      border-bottom: 1px solid var(--kilo-border);
+      color: var(--kilo-text-light);
+      vertical-align: top;
+    }
+
+    .kilo-table td:first-child {
+      font-weight: 500;
+      color: var(--kilo-light);
+    }
+
+    .kilo-table tbody tr:hover {
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* Scorecard */
+    .scorecard {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      min-width: 600px;
+    }
+
+    .scorecard th {
+      font-family: var(--font-space);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.65rem;
+      color: var(--kilo-text-muted);
+      padding: 0.6rem 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      white-space: nowrap;
+    }
+
+    .scorecard th:first-child { text-align: left; min-width: 140px; }
+
+    .scorecard td {
+      padding: 0.55rem 0.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--kilo-border);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .scorecard td:first-child {
+      text-align: left;
+      font-weight: 500;
+      color: var(--kilo-light);
+    }
+
+    .scorecard .row-client td { background: rgba(204,255,0,0.05); }
+    .scorecard .row-client td:first-child { font-weight: 700; color: var(--kilo-accent); }
+
+    .score-high { color: var(--pass); font-weight: 600; }
+    .score-mid { color: var(--warn); font-weight: 500; }
+    .score-low { color: var(--fail); font-weight: 500; }
+
+    .sc-pass { background: var(--pass-bg); color: var(--pass); font-weight: 600; border-radius: 3px; padding: 0.15rem 0.5rem; }
+    .sc-warn { background: var(--warn-bg); color: var(--warn); font-weight: 500; border-radius: 3px; padding: 0.15rem 0.5rem; }
+    .sc-fail { background: var(--fail-bg); color: var(--fail); font-weight: 500; border-radius: 3px; padding: 0.15rem 0.5rem; }
+
+    /* ── Pattern cards ── */
+    .pattern-card {
+      background: var(--kilo-card-bg);
+      border: 1px solid var(--kilo-border);
+      border-left: 3px solid var(--kilo-accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      transition: background 0.2s ease;
+      page-break-inside: avoid;
+    }
+
+    .pattern-card:hover { background: var(--kilo-card-bg-hover); }
+
+    .pattern-number {
+      font-family: var(--font-archivo);
+      font-size: 1.6rem;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 0.25rem;
+    }
+
+    .pattern-title {
+      font-family: var(--font-archivo);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--kilo-light);
+      margin-bottom: 0.5rem;
+    }
+
+    .pattern-body {
+      font-size: 0.85rem;
+      color: var(--kilo-text-muted);
+      line-height: 1.7;
+    }
+
+    .pattern-body strong { color: var(--kilo-text-light); }
+
+    /* ── Competitor intel cards ── */
+    .intel-card {
+      background: var(--kilo-card-bg);
+      border: 1px solid var(--kilo-border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      border-top: 3px solid var(--kilo-accent);
+      transition: background 0.2s ease;
+      page-break-inside: avoid;
+    }
+
+    .intel-card:hover { background: var(--kilo-card-bg-hover); }
+
+    .intel-card-name {
+      font-family: var(--font-archivo);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--kilo-light);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .intel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+      font-size: 0.82rem;
+    }
+
+    .intel-grid dt {
+      color: var(--kilo-text-muted);
+      font-weight: 500;
+    }
+
+    .intel-grid dd {
+      color: var(--kilo-text-light);
+    }
+
+    /* ── Site architecture tree ── */
+    .arch-tree {
+      font-family: var(--font-space);
+      font-size: 0.8rem;
+      color: var(--kilo-text-light);
+      line-height: 1.8;
+      padding: 1rem 1.5rem;
+      background: var(--kilo-card-bg);
+      border: 1px solid var(--kilo-border);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .arch-tree .depth-0 { color: var(--kilo-accent); font-weight: 600; }
+    .arch-tree .depth-1 { padding-left: 1.5rem; }
+    .arch-tree .depth-2 { padding-left: 3rem; color: var(--kilo-text-muted); }
+
+    .arch-missing { color: var(--fail); font-style: italic; }
+
+    /* ── Callout ── */
+    .callout {
+      background: rgba(204,255,0,0.05);
+      border: 1px solid var(--kilo-border-accent);
+      border-left: 3px solid var(--kilo-accent);
+      border-radius: 0 8px 8px 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+      page-break-inside: avoid;
+    }
+
+    .callout-title {
+      font-family: var(--font-archivo);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--kilo-accent);
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .callout-body {
+      font-size: 0.85rem;
+      color: var(--kilo-text-light);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--kilo-border);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--kilo-text-muted);
+      line-height: 1.8;
+      page-break-inside: avoid;
+    }
+
+    .footer-brand {
+      font-family: var(--font-archivo);
+      font-weight: 700;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .page { padding: 2rem 1.25rem; }
+      .cover { padding: 3rem 1.25rem; }
+      .cover h1 { font-size: 2rem; }
+      .section-number { font-size: 2rem; }
+      .section-title { font-size: 1.2rem; }
+      .card { padding: 1.25rem; }
+      .brand-grid { grid-template-columns: 1fr; }
+      .intel-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      @page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+      html { font-size: 14px; }
+      body { background: white; color: #1a1a1a; }
+      .page { max-width: none; padding: 0; }
+      .cover { padding: 4rem 0 3rem; page-break-after: always; }
+      .cover h1 { color: #1a1a1a; }
+      .cover h1 em { color: #282828; }
+      .cover-badge { color: #282828; border-color: #282828; }
+      .section { page-break-inside: avoid; }
+      .section-title { color: #1a1a1a; }
+      .section-number { color: #e0e0e0; }
+      .card, .pattern-card, .intel-card {
+        background: #f9f9f9;
+        border-color: #e0e0e0;
+        border-left-color: #282828;
+        break-inside: avoid;
+      }
+      .card:hover, .pattern-card:hover, .intel-card:hover { background: #f9f9f9; }
+      .kilo-table td, .scorecard td { color: #1a1a1a; border-color: #e0e0e0; }
+      .kilo-table th, .scorecard th { color: #666; border-color: #ccc; }
+      .footer { border-color: #e0e0e0; }
+      .arch-tree { background: #f9f9f9; border-color: #e0e0e0; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- COVER -->
+  <section class="cover">
+    <img src="https://kiloagency.org/logo-light.png" alt="KILO Agency" style="height:64px;margin-bottom:2.5rem;filter:brightness(0) invert(1);">
+    <br>
+    <div class="cover-badge">SEO + Competitive Intelligence Audit</div>
+    <h1>D&amp;M Roofing Texas <em>SEO Audit</em></h1>
+    <p class="cover-subtitle">Brand extraction, keyword opportunities, on-page health, content gaps, technical checks, competitor benchmarks, winning patterns, and architecture mapping</p>
+
+    <hr class="cover-divider">
+
+    <div class="cover-meta">
+      <strong>11 April 2026</strong><br>
+      Prepared by <strong>KILO Agency</strong><br>
+      <span style="font-size: 0.78rem;">kiloagency.org</span>
+    </div>
+  </section>
+
+
+  <!-- 00. BRAND SNAPSHOT -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">00</span>
+      <h2 class="section-title">Brand Snapshot</h2>
+    </div>
+    <p class="section-intro">Extracted from the live site via automated scraping. This is what your website currently communicates.</p>
+    <div class="card">
+      <div class="card-body">
+        <dl class="brand-grid">
+          <dt>Company</dt>
+          <dd>D&amp;M Roofing &amp; Siding - Texas Division</dd>
+          <dt>Primary Color</dt>
+          <dd><span class="color-swatch" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);"></span>Gradient blues</dd>
+          <dt>Secondary Color</dt>
+          <dd><span class="color-swatch" style="background:#ffffff;"></span>#ffffff (Whites)</dd>
+          <dt>Heading Font</dt>
+          <dd>System sans-serif</dd>
+          <dt>Body Font</dt>
+          <dd>System sans-serif</dd>
+          <dt>Tone of Voice</dt>
+          <dd>Professional, family-oriented, community-focused</dd>
+          <dt>Core Message</dt>
+          <dd>"Redefining the Standards in Roofing Services"</dd>
+          <dt>Total Pages</dt>
+          <dd>44+ in sitemap</dd>
+          <dt>Site Depth</dt>
+          <dd>2-3 clicks from homepage</dd>
+          <dt>CMS</dt>
+          <dd>WordPress + Elementor</dd>
+        </dl>
+      </div>
+      <div class="tags">
+        <span class="tag tag--accent">Live Data</span>
+        <span class="tag">Scraped 11 April 2026</span>
+        <span class="tag">WordPress / Elementor</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 01. EXECUTIVE SUMMARY -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Executive Summary</h2>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <p>D&amp;M Roofing operates from a Nebraska HQ (Waterloo, NE) and uses texas.dandmroofing.com as a subdomain for its Texas division. The site has solid bones: 44+ pages, decent content volume averaging 2,800 words per page, clean URL structure, and a reasonable schema range including LocalBusiness, VideoObject, and BreadcrumbList.</p>
+        <p><strong>The critical problem:</strong> the LocalBusiness schema on every single page lists the Nebraska address (23920 Cedar Hollow Mall, Waterloo, NE) instead of a Texas address. Google thinks this is a Nebraska business. Every page tells Google the wrong state. Until this is fixed, no amount of content or technical optimization will move the needle on Texas rankings.</p>
+        <p>Open Graph and Twitter Card tags are completely absent across all 11 audited pages. H1 tags are missing on 9 of 11 pages, with H2 used as the primary heading instead. Meta descriptions are missing on 7 of 11 pages. Title tags on 7 of 11 pages reference "Nebraska &amp; Texas" on what should be a Texas-only subdomain. The phone number displayed is a Nebraska area code (402). Service area pages are templated with no unique local content.</p>
+        <p>The blog/post sitemap contains a single default WordPress post from 2018. There is zero educational or informational content targeting the Texas market. No storm damage page exists despite Texas being a top-5 state for hail damage.</p>
+        <p><strong>Strengths worth preserving:</strong> good schema variety (just needs correct geographic data), strong content volume per page, clean URL structure, and a large service area page footprint covering 20+ Houston metro cities.</p>
+      </div>
+      <div class="tags">
+        <span class="tag tag--accent">11 Pages Audited</span>
+        <span class="tag tag--fail">Schema Present but Wrong Address</span>
+        <span class="tag tag--fail">No OG Tags</span>
+        <span class="tag tag--fail">9 Missing H1s</span>
+        <span class="tag tag--warn">7 Missing Meta Descriptions</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 02. KEYWORD OPPORTUNITIES -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Keyword Opportunities</h2>
+    </div>
+    <p class="section-intro">Keyword opportunities ranked by opportunity score. Opportunity = search demand + difficulty + relevance to D&amp;M's Texas services and service areas.</p>
+    <div class="table-wrap">
+      <table class="kilo-table">
+        <thead>
+          <tr>
+            <th>Keyword</th>
+            <th>Difficulty</th>
+            <th>Opportunity</th>
+            <th>Current</th>
+            <th>Intent</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>roofing company houston tx</td>
+            <td><span class="sc-fail">Hard</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Homepage + area page</td>
+          </tr>
+          <tr>
+            <td>roof repair houston tx</td>
+            <td><span class="sc-fail">Hard</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Dedicated page (missing)</td>
+          </tr>
+          <tr>
+            <td>roof replacement houston tx</td>
+            <td><span class="sc-fail">Hard</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Dedicated page (missing)</td>
+          </tr>
+          <tr>
+            <td>roofing company conroe tx</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Area page (exists but thin)</td>
+          </tr>
+          <tr>
+            <td>roofing company the woodlands tx</td>
+            <td><span class="sc-warn">Moderate</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Area page (exists)</td>
+          </tr>
+          <tr>
+            <td>storm damage roof repair texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Dedicated page (missing)</td>
+          </tr>
+          <tr>
+            <td>hail damage roof repair houston</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Dedicated page (missing)</td>
+          </tr>
+          <tr>
+            <td>commercial roofing houston tx</td>
+            <td><span class="sc-warn">Moderate</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>metal roofing houston tx</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>asphalt shingle roofing texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>roof inspection near me houston</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Transactional</td>
+            <td>GBP + service page</td>
+          </tr>
+          <tr>
+            <td>how much does roof replacement cost texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Informational</td>
+            <td>Blog (missing)</td>
+          </tr>
+          <tr>
+            <td>signs you need a new roof</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Informational</td>
+            <td>Blog (missing)</td>
+          </tr>
+          <tr>
+            <td>best roofing materials for texas heat</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Informational</td>
+            <td>Blog (missing)</td>
+          </tr>
+          <tr>
+            <td>how to file roof insurance claim texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Informational</td>
+            <td>Blog (missing)</td>
+          </tr>
+          <tr>
+            <td>flat roof repair houston</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>TPO roofing contractor texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page (create)</td>
+          </tr>
+          <tr>
+            <td>roof coating houston tx</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>cedar shake roofing texas</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Not ranking</td>
+            <td>Commercial</td>
+            <td>Service page exists</td>
+          </tr>
+          <tr>
+            <td>emergency roof repair houston</td>
+            <td><span class="sc-pass">Easy</span></td>
+            <td><span class="sc-pass">High</span></td>
+            <td>Not ranking</td>
+            <td>Transactional</td>
+            <td>Dedicated page (missing)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- 03. ON-PAGE ISSUES -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">03</span>
+      <h2 class="section-title">On-Page Issues</h2>
+    </div>
+    <p class="section-intro">Issues found across 11 audited pages, ordered by severity. Critical issues directly prevent correct indexation or ranking in Texas.</p>
+    <div class="table-wrap">
+      <table class="kilo-table">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>Issue</th>
+            <th>Severity</th>
+            <th>Recommended Fix</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All pages</td>
+            <td>Schema lists Nebraska address (Waterloo, NE) on Texas subdomain</td>
+            <td><span class="sc-fail">Critical</span></td>
+            <td>Update LocalBusiness JSON-LD with Texas address, phone, and service areas</td>
+          </tr>
+          <tr>
+            <td>All pages</td>
+            <td>No Open Graph tags (0/11 pages)</td>
+            <td><span class="sc-fail">Critical</span></td>
+            <td>Add og:title, og:description, og:image, og:url via Rank Math</td>
+          </tr>
+          <tr>
+            <td>All pages</td>
+            <td>No Twitter Card tags</td>
+            <td><span class="sc-fail">Critical</span></td>
+            <td>Add twitter:card, twitter:title, twitter:description, twitter:image</td>
+          </tr>
+          <tr>
+            <td>9/11 pages</td>
+            <td>Missing H1 tag (H2 used as primary heading)</td>
+            <td><span class="sc-fail">Critical</span></td>
+            <td>Change primary H2 to H1 with target keyword</td>
+          </tr>
+          <tr>
+            <td>7/11 pages</td>
+            <td>Missing meta description</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Write unique 150-160 char descriptions with keyword + CTA</td>
+          </tr>
+          <tr>
+            <td>7/11 pages</td>
+            <td>Title tags reference "Nebraska &amp; Texas" on Texas subdomain</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Remove "Nebraska" from all Texas subdomain titles</td>
+          </tr>
+          <tr>
+            <td>All pages</td>
+            <td>Nebraska phone number (402 area code) displayed</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Get Texas phone number (512/832/713 area code)</td>
+          </tr>
+          <tr>
+            <td>All pages</td>
+            <td>Image alt text absent or generic</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Add descriptive keyword-relevant alt text to all images</td>
+          </tr>
+          <tr>
+            <td>Service area pages</td>
+            <td>Templated content, no unique local copy</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Write 500+ words unique content per location</td>
+          </tr>
+          <tr>
+            <td>/service-area/houston/</td>
+            <td>Schema lists Nebraska locations, not Houston</td>
+            <td><span class="sc-fail">Critical</span></td>
+            <td>Replace service area list with Houston-area cities</td>
+          </tr>
+          <tr>
+            <td>/past-work/</td>
+            <td>Minimal project descriptions</td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Add location, scope, materials, before/after context</td>
+          </tr>
+          <tr>
+            <td>Homepage</td>
+            <td>Title tag not detected clearly</td>
+            <td><span class="sc-warn">Medium</span></td>
+            <td>Set explicit title: "D&amp;M Roofing &amp; Siding Texas | Residential &amp; Commercial Roofing"</td>
+          </tr>
+          <tr>
+            <td>/residential-services/</td>
+            <td>Title: "Affordable Residential Roofing Solutions In Nebraska And Texas"</td>
+            <td><span class="sc-fail">High</span></td>
+            <td>Change to "Residential Roofing Services in Texas | D&amp;M Roofing"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- 04. CONTENT GAP RECOMMENDATIONS -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Content Gap Recommendations</h2>
+    </div>
+    <p class="section-intro">Topics and pages competitors cover that D&amp;M Texas does not. Each recommendation includes format, priority, and reasoning.</p>
+
+    <div class="pattern-card">
+      <div class="pattern-number">1</div>
+      <div class="pattern-title">Storm Damage &amp; Hail Repair Page</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> Texas is a top-5 state for hail damage. Every top competitor has a dedicated storm damage page. D&amp;M has nothing. These pages have the highest conversion rates in roofing because searchers need immediate help.</p>
+        <p><strong>Format:</strong> Landing page, 1,500+ words | <strong>Priority:</strong> High</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">2</div>
+      <div class="pattern-title">Roof Insurance Claim Assistance Guide</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> Competitors feature insurance claim help prominently. D&amp;M has nothing. "How to file roof insurance claim Texas" is an easy keyword with strong commercial intent. Builds trust and captures leads at the decision stage.</p>
+        <p><strong>Format:</strong> Service page + blog post | <strong>Priority:</strong> High</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">3</div>
+      <div class="pattern-title">Pricing / Cost Guide</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> "How much does a roof replacement cost in Texas?" has no coverage from D&amp;M. Pricing content captures buyers in the research phase and builds authority. Easy keyword with medium volume.</p>
+        <p><strong>Format:</strong> Long-form guide, 2,000+ words | <strong>Priority:</strong> High</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">4</div>
+      <div class="pattern-title">Blog Content Hub</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> The post sitemap has 1 entry from 2018. Zero informational content. Target keywords: "signs you need a new roof", "metal vs asphalt texas", "best roofing materials for texas heat". Blog builds topical authority and captures informational queries that feed commercial intent.</p>
+        <p><strong>Format:</strong> Blog section, 2-4 posts per month | <strong>Priority:</strong> High</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">5</div>
+      <div class="pattern-title">Dedicated Roof Repair &amp; Roof Replacement Pages</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> "Roof repair" and "roof replacement" are separate high-intent keywords with different search volumes. Currently both are bundled under generic "residential services". Splitting them into dedicated landing pages lets each rank independently.</p>
+        <p><strong>Format:</strong> 2 dedicated landing pages | <strong>Priority:</strong> Medium</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">6</div>
+      <div class="pattern-title">Warranty / Guarantee Page</div>
+      <div class="pattern-body">
+        <p><strong>Why it matters:</strong> No dedicated warranty information exists on the site. Competitors display warranty details prominently. A warranty page builds trust and reduces friction at the decision stage.</p>
+        <p><strong>Format:</strong> Landing page | <strong>Priority:</strong> Medium</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 05. TECHNICAL SEO CHECKLIST -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Technical SEO Checklist</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="kilo-table">
+        <thead>
+          <tr>
+            <th>Check</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTTPS / SSL</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Valid certificate via hosting</td>
+          </tr>
+          <tr>
+            <td>robots.txt</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Standard WordPress config, sitemap referenced</td>
+          </tr>
+          <tr>
+            <td>XML Sitemap</td>
+            <td><span class="sc-warn">Warning</span></td>
+            <td>Exists but post sitemap from 2018, date inconsistencies</td>
+          </tr>
+          <tr>
+            <td>Canonical tags</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Present on key pages (homepage, contact, service area)</td>
+          </tr>
+          <tr>
+            <td>Structured data</td>
+            <td><span class="sc-warn">Warning</span></td>
+            <td>Present (LocalBusiness, VideoObject, BreadcrumbList) but wrong geographic data</td>
+          </tr>
+          <tr>
+            <td>URL structure</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Clean, descriptive, keyword-capable</td>
+          </tr>
+          <tr>
+            <td>Mobile responsive</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Viewport configured, responsive design</td>
+          </tr>
+          <tr>
+            <td>Heading hierarchy</td>
+            <td><span class="sc-fail">Fail</span></td>
+            <td>9/11 pages missing H1, most use H2 as primary heading</td>
+          </tr>
+          <tr>
+            <td>Open Graph tags</td>
+            <td><span class="sc-fail">Fail</span></td>
+            <td>Completely absent on all 11 pages</td>
+          </tr>
+          <tr>
+            <td>Twitter Card tags</td>
+            <td><span class="sc-fail">Fail</span></td>
+            <td>Completely absent on all 11 pages</td>
+          </tr>
+          <tr>
+            <td>Image optimization</td>
+            <td><span class="sc-warn">Warning</span></td>
+            <td>No WebP/AVIF, no lazy loading detected</td>
+          </tr>
+          <tr>
+            <td>Preload / preconnect</td>
+            <td><span class="sc-fail">Fail</span></td>
+            <td>No resource hints detected</td>
+          </tr>
+          <tr>
+            <td>Page weight</td>
+            <td><span class="sc-warn">Warning</span></td>
+            <td>Heavy Elementor CSS/JS bloat, estimated 3MB+ per page</td>
+          </tr>
+          <tr>
+            <td>State-switching</td>
+            <td><span class="sc-warn">Warning</span></td>
+            <td>CSS display:none used to toggle NE/TX content (both loaded in DOM)</td>
+          </tr>
+          <tr>
+            <td>Google Tag Manager</td>
+            <td><span class="sc-pass">Pass</span></td>
+            <td>Present, loaded asynchronously</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- 06. COMPETITOR SCORECARD -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Competitor Scorecard</h2>
+    </div>
+
+    <h3 class="sub-header">6a. Multi-Criteria Scorecard</h3>
+    <p class="section-intro">Each competitor scored 1-10 across 8 dimensions. Scores 8-10 are green, 5-7 yellow, 1-4 red.</p>
+    <div class="table-wrap">
+      <table class="scorecard">
+        <thead>
+          <tr>
+            <th>Criterion</th>
+            <th>D&amp;M Texas</th>
+            <th>Longhorn</th>
+            <th>Zilker</th>
+            <th>Ace</th>
+            <th>1st Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-client">
+            <td>Search Visibility</td>
+            <td><span class="score-low">2</span></td>
+            <td><span class="score-high">9</span></td>
+            <td><span class="score-high">8</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+          </tr>
+          <tr>
+            <td>Review Quality</td>
+            <td><span class="score-mid">5</span></td>
+            <td><span class="score-high">8</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-high">8</span></td>
+            <td><span class="score-mid">7</span></td>
+          </tr>
+          <tr>
+            <td>Visual Design</td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">5</span></td>
+            <td><span class="score-mid">5</span></td>
+          </tr>
+          <tr>
+            <td>Mobile Responsive</td>
+            <td><span class="score-mid">5</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">5</span></td>
+          </tr>
+          <tr>
+            <td>Content Depth</td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+          </tr>
+          <tr>
+            <td>Social Proof</td>
+            <td><span class="score-low">4</span></td>
+            <td><span class="score-high">8</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-high">8</span></td>
+            <td><span class="score-mid">6</span></td>
+          </tr>
+          <tr>
+            <td>CTA Strategy</td>
+            <td><span class="score-mid">5</span></td>
+            <td><span class="score-mid">7</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">5</span></td>
+          </tr>
+          <tr>
+            <td>Page Speed</td>
+            <td><span class="score-low">3</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">6</span></td>
+            <td><span class="score-mid">5</span></td>
+            <td><span class="score-mid">5</span></td>
+          </tr>
+          <tr>
+            <td><strong>TOTAL</strong></td>
+            <td><strong>37/80</strong></td>
+            <td><strong>59/80</strong></td>
+            <td><strong>52/80</strong></td>
+            <td><strong>52/80</strong></td>
+            <td><strong>45/80</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout">
+      <div class="callout-title">Key Insight</div>
+      <div class="callout-body">D&amp;M is underperforming primarily due to wrong geographic targeting (Nebraska schema on Texas site) and heavy Elementor bloat killing page speed. The content depth is actually competitive. The issue is delivery and targeting, not substance.</div>
+    </div>
+
+    <h3 class="sub-header">6b. SEO-Specific Comparison</h3>
+    <div class="table-wrap">
+      <table class="scorecard">
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>D&amp;M Texas</th>
+            <th>Longhorn</th>
+            <th>Ace</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-client">
+            <td>Total Pages</td>
+            <td>44+</td>
+            <td>~30</td>
+            <td>~25</td>
+          </tr>
+          <tr>
+            <td>Avg Content Depth</td>
+            <td>~2,800 words</td>
+            <td>~1,500 words</td>
+            <td>~1,200 words</td>
+          </tr>
+          <tr>
+            <td>Schema Markup</td>
+            <td>LocalBusiness+Video+Breadcrumb (wrong address)</td>
+            <td>LocalBusiness</td>
+            <td>LocalBusiness</td>
+          </tr>
+          <tr>
+            <td>Domain Age</td>
+            <td>7+ years (subdomain)</td>
+            <td>10+ years</td>
+            <td>10+ years</td>
+          </tr>
+          <tr>
+            <td>Backlink Profile</td>
+            <td>Weak</td>
+            <td>Strong</td>
+            <td>Strong</td>
+          </tr>
+          <tr>
+            <td>Google Reviews</td>
+            <td>46 (4.9 stars, may be Nebraska)</td>
+            <td>200+</td>
+            <td>300+</td>
+          </tr>
+          <tr>
+            <td>Area Pages</td>
+            <td>20+ (Houston metro)</td>
+            <td>15+</td>
+            <td>10+</td>
+          </tr>
+          <tr>
+            <td>Blog</td>
+            <td>None</td>
+            <td>Active</td>
+            <td>Some</td>
+          </tr>
+          <tr>
+            <td>OG Tags</td>
+            <td>None</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- 07. COMPETITOR BRAND & CONVERSION INTEL -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">07</span>
+      <h2 class="section-title">Competitor Brand &amp; Conversion Intel</h2>
+    </div>
+    <p class="section-intro">How the top Texas roofing competitors position, convert, and differentiate.</p>
+
+    <div class="intel-card">
+      <div class="intel-card-name">Longhorn Roofing</div>
+      <dl class="intel-grid">
+        <dt>Domain</dt>
+        <dd>austinlonghornroofing.com</dd>
+        <dt>Experience</dt>
+        <dd>35+ years</dd>
+        <dt>Brand Position</dt>
+        <dd>Strong local brand, deep community roots</dd>
+        <dt>Primary CTA</dt>
+        <dd>"Free Roof Inspection"</dd>
+        <dt>Lead Capture</dt>
+        <dd>Phone + form</dd>
+        <dt>Trust Signals</dt>
+        <dd>BBB A+ rated, hundreds of Google reviews</dd>
+        <dt>Threat Level</dt>
+        <dd><span class="sc-fail">High</span></dd>
+      </dl>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-card-name">Zilker Roofing</div>
+      <dl class="intel-grid">
+        <dt>Domain</dt>
+        <dd>zilkerroofing.com</dd>
+        <dt>Brand Position</dt>
+        <dd>Family-run, storm restoration focus</dd>
+        <dt>Differentiator</dt>
+        <dd>Honest roofing advice positioning</dd>
+        <dt>Primary CTA</dt>
+        <dd>"Schedule Your Inspection"</dd>
+        <dt>Trust Signals</dt>
+        <dd>Strong community trust, local reputation</dd>
+        <dt>Threat Level</dt>
+        <dd><span class="sc-fail">High</span></dd>
+      </dl>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-card-name">Ace Roofing Company</div>
+      <dl class="intel-grid">
+        <dt>Domain</dt>
+        <dd>aceroofingtexas.com</dd>
+        <dt>Services</dt>
+        <dd>Full-service: residential + commercial + new construction</dd>
+        <dt>Primary CTA</dt>
+        <dd>"Get Free Estimate" + phone (512) 836-7663</dd>
+        <dt>Strengths</dt>
+        <dd>Extensive service range, 300+ Google reviews</dd>
+        <dt>Threat Level</dt>
+        <dd><span class="sc-fail">High</span></dd>
+      </dl>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-card-name">1st Capital Certified Roofing</div>
+      <dl class="intel-grid">
+        <dt>Domain</dt>
+        <dd>roofingcompanyaustin.com (exact match domain)</dd>
+        <dt>Experience</dt>
+        <dd>25 years, award-winning</dd>
+        <dt>Specialization</dt>
+        <dd>Metal + asphalt specialist</dd>
+        <dt>Key Advantage</dt>
+        <dd>Strong keyword-targeted domain name</dd>
+        <dt>Threat Level</dt>
+        <dd><span class="sc-warn">Medium-High</span></dd>
+      </dl>
+    </div>
+  </section>
+
+
+  <!-- 08. PATTERNS OF THE TOP 10% -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">08</span>
+      <h2 class="section-title">Patterns of the Top 10%</h2>
+    </div>
+    <p class="section-intro">What the highest-ranking Texas roofing companies do consistently. Each pattern includes a specific action for D&amp;M.</p>
+
+    <div class="pattern-card">
+      <div class="pattern-number">1</div>
+      <div class="pattern-title">Local Phone Number and NAP Consistency</div>
+      <div class="pattern-body">
+        <p>Winners have a <strong>local area code phone number</strong> on every page, in schema, in GBP, consistent everywhere. D&amp;M shows a Nebraska 402 area code on the Texas site. Google uses phone number locality as a ranking signal for local search.</p>
+        <p><strong>Action:</strong> Get a Texas phone number (713/832/512 area code) and update site-wide.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">2</div>
+      <div class="pattern-title">Dedicated Storm Damage + Insurance Pages</div>
+      <div class="pattern-body">
+        <p>Texas is a hail and storm market. <strong>Every top competitor</strong> has dedicated storm damage and insurance claim assistance pages. D&amp;M has neither. These pages have the highest conversion rates in roofing because the searcher has an active problem.</p>
+        <p><strong>Action:</strong> Create /storm-damage/ and /insurance-claims/ pages immediately.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">3</div>
+      <div class="pattern-title">Google Reviews as Trust Accelerator</div>
+      <div class="pattern-body">
+        <p>Longhorn has 200+ reviews. Ace has 300+. D&amp;M shows <strong>46 reviews at 4.9 stars</strong>, but schema references Nebraska. Texas customers see no local reviews. Google's local ranking factors weight review count and recency heavily.</p>
+        <p><strong>Action:</strong> Build a Texas-specific GBP listing and review collection process.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">4</div>
+      <div class="pattern-title">Static/Fast Sites Beat WordPress Bloat</div>
+      <div class="pattern-body">
+        <p>Top Austin competitors load in under 2 seconds. D&amp;M's Elementor build loads <strong>3MB+ per page</strong>. A static site generator (Astro, Next.js) would cut page weight by 80%. Page speed is a confirmed ranking factor, especially on mobile.</p>
+        <p><strong>Action:</strong> Consider rebuilding on a static framework, or aggressively strip Elementor bloat.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">5</div>
+      <div class="pattern-title">Exact-Match or Keyword-Rich Domain Wins</div>
+      <div class="pattern-body">
+        <p>1st Capital owns <strong>roofingcompanyaustin.com</strong>. texas.dandmroofing.com is a subdomain of a Nebraska company. Subdomains inherit less authority than root domains and are treated as separate entities by Google.</p>
+        <p><strong>Action:</strong> Consider a dedicated Texas domain (e.g., dandmroofingtexas.com) for stronger signal.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 09. SITE ARCHITECTURE -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-number">09</span>
+      <h2 class="section-title">Site Architecture</h2>
+    </div>
+    <p class="section-intro">Current site structure mapped from sitemap and crawl. Missing pages highlighted in red.</p>
+
+    <h3 class="sub-header">Current Site Map</h3>
+    <div class="arch-tree"><span class="depth-0">/ (Homepage)</span>
+<span class="depth-1">/residential-services/ (Hub)</span>
+<span class="depth-2">/residential-services/asphalt-roofing/</span>
+<span class="depth-2">/residential-services/cedar-shake-roofing/</span>
+<span class="depth-2">/residential-services/copper-roofing/</span>
+<span class="depth-2">/residential-services/metal-roofing/</span>
+<span class="depth-2">/residential-services/rubber-roofing/</span>
+<span class="depth-2">/residential-services/shingle-roofing/</span>
+<span class="depth-2">/residential-services/slate-roofing/</span>
+<span class="depth-2">/residential-services/tile-roofing/</span>
+<span class="depth-2">/residential-services/siding/</span>
+<span class="depth-1">/commercial-services/ (Hub)</span>
+<span class="depth-2">/commercial-services/roof-coating/</span>
+<span class="depth-2">/commercial-services/roll-roofing/</span>
+<span class="depth-2">/commercial-services/pvc-roofing/</span>
+<span class="depth-2">/commercial-services/flat-roofing/</span>
+<span class="depth-1">/service-area/ (Hub)</span>
+<span class="depth-2">/service-area/houston/</span>
+<span class="depth-2">/service-area/conroe/</span>
+<span class="depth-2">/service-area/katy/</span>
+<span class="depth-2">/service-area/the-woodlands/</span>
+<span class="depth-2">/service-area/spring/</span>
+<span class="depth-2">... (20+ area pages, Houston metro)</span>
+<span class="depth-2 arch-missing">MISSING: /service-area/austin/</span>
+<span class="depth-2 arch-missing">MISSING: /service-area/dallas/</span>
+<span class="depth-2 arch-missing">MISSING: /service-area/san-antonio/</span>
+<span class="depth-1">/about-us/</span>
+<span class="depth-1">/past-work/</span>
+<span class="depth-1">/contact/</span>
+<span class="depth-1">/veteransroofgiveaway/</span>
+<span class="depth-1 arch-missing">MISSING: /blog/</span>
+<span class="depth-1 arch-missing">MISSING: /storm-damage/</span>
+<span class="depth-1 arch-missing">MISSING: /roof-repair/</span>
+<span class="depth-1 arch-missing">MISSING: /roof-replacement/</span></div>
+
+    <h3 class="sub-header">Architecture vs Competitors</h3>
+    <div class="table-wrap">
+      <table class="scorecard">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>D&amp;M Texas</th>
+            <th>Longhorn</th>
+            <th>Ace</th>
+            <th>1st Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-client">
+            <td>Service Hub Pages</td>
+            <td>2 (Residential + Commercial)</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Individual Service Pages</td>
+            <td>13+</td>
+            <td>8+</td>
+            <td>6+</td>
+            <td>5+</td>
+          </tr>
+          <tr>
+            <td>Service Area Pages</td>
+            <td>20+</td>
+            <td>15+</td>
+            <td>10+</td>
+            <td>5+</td>
+          </tr>
+          <tr>
+            <td>Blog / Resources</td>
+            <td><span class="sc-fail">None</span></td>
+            <td><span class="sc-pass">Active</span></td>
+            <td><span class="sc-warn">Some</span></td>
+            <td><span class="sc-warn">Some</span></td>
+          </tr>
+          <tr>
+            <td>Storm / Insurance Pages</td>
+            <td><span class="sc-fail">None</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+          </tr>
+          <tr>
+            <td>Dedicated Repair Page</td>
+            <td><span class="sc-fail">None</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+            <td><span class="sc-pass">Yes</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-header">Recommended Architecture Changes</h3>
+
+    <div class="pattern-card">
+      <div class="pattern-number">1</div>
+      <div class="pattern-title">Add /storm-damage/ Landing Page</div>
+      <div class="pattern-body">
+        <p>Highest-priority missing page. Target keywords: "storm damage roof repair texas", "hail damage roof repair houston". Include insurance claim assistance content, emergency contact CTA, before/after photos. Link from homepage and all service area pages.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">2</div>
+      <div class="pattern-title">Add /roof-repair/ and /roof-replacement/ Pages</div>
+      <div class="pattern-body">
+        <p>Split these out of /residential-services/. Each targets different search intent and keyword clusters. "Roof repair houston tx" and "roof replacement houston tx" are both high-volume, high-intent keywords that need dedicated landing pages.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">3</div>
+      <div class="pattern-title">Launch /blog/ Content Hub</div>
+      <div class="pattern-body">
+        <p>Start with 4 cornerstone posts: "How Much Does Roof Replacement Cost in Texas", "Signs You Need a New Roof", "Best Roofing Materials for Texas Heat", "How to File a Roof Insurance Claim in Texas". Publish 2-4 posts per month to build topical authority.</p>
+      </div>
+    </div>
+
+    <div class="pattern-card">
+      <div class="pattern-number">4</div>
+      <div class="pattern-title">Expand Service Area Coverage</div>
+      <div class="pattern-body">
+        <p>Add area pages for Austin, Dallas, and San Antonio if D&amp;M services those metros. Each page needs 500+ words of unique local content, local schema, and location-specific testimonials. Do not duplicate the templated approach of current pages.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STRATEGIC RECOMMENDATION -->
+  <div class="callout" style="margin-top: 3rem;">
+    <div class="callout-title">Strategic Recommendation</div>
+    <div class="callout-body">
+      <p><strong>Priority 1: Fix schema geographic data.</strong> Every page tells Google this is a Nebraska business. The LocalBusiness JSON-LD on all pages lists 23920 Cedar Hollow Mall, Waterloo, NE. Until the schema, phone number, and address are updated to Texas, no amount of content or technical optimization will help Texas rankings. This is the single highest-impact fix.</p>
+      <p><strong>Priority 2: Add H1 tags and meta descriptions site-wide.</strong> 9 of 11 pages have no H1, and 7 of 11 have no meta description. These are table-stakes SEO elements that every competitor has in place.</p>
+      <p><strong>Priority 3: Add Open Graph and Twitter Card tags.</strong> Zero social sharing metadata means every link shared on social platforms shows a blank preview. This kills referral traffic and brand perception.</p>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="https://kiloagency.org/logo-light.png" alt="KILO Agency" style="height:32px;margin-bottom:0.75rem;filter:brightness(0) invert(1);opacity:0.5;">
+    <br>
+    <span class="footer-brand">AI-native marketing for trades businesses</span><br>
+    kiloagency.org<br><br>
+    <span style="font-size:0.68rem;">This report is a point-in-time snapshot based on data collected 11 April 2026. Rankings, competitor positioning, and technical status may change. Recommendations should be validated before implementation.</span>
+  </footer>
+
+</div>
+
+</body>
+</html>
